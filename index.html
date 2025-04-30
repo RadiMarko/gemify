@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Gemify</title>
+  </head>
+
+  <body>
+    <div class="top-section">
+      <button class="button-top" id="button-reset">
+        <img class="new-game" src="Retry.png" alt="New game button." />
+      </button>
+      <h1>Gemify</h1>
+      <button class="button-top" id="button-info">
+        <img class="info" src="Info.png" alt="Info button for rules." />
+      </button>
+    </div>
+    <div class="modal hidden">
+      <button class="close-modal hidden">&times;</button>
+      <h2 class="rule-title">Rules</h2>
+      <p class="rule-line" id="rule-line-1">Click "Roll" to roll the dice.</p>
+      <p class="rule-line" id="rule-line-2">Click "Hold" to add current value (black number) to total value (gold, underlined number). If you hold, the other player's turn starts. </p>
+      <p class="rule-line" id="rule-line-3">The first player to gain 30 or more total points wins.</p>
+      </p>
+      <div class="icons">
+        <div class="line-gem">
+          <img class="icon" src="gem.png" alt="Gem icon." />
+          <p id="gem-text">Gems are the most common, and rolling one gives the active player 1 point. Chance: 4/6th.</p>
+        </div>
+        <div class="line-crown">
+          <img class="icon" src="crown.png" alt="Gem icon." />
+          <p id="crown-text">Crowns are lucky, as rolling one gives the active player 2 points. Chance: 1/6th.</p>
+        </div>
+        <div class="line-bomb">
+          <img class="icon" src="bomb.png" alt="Gem icon." />
+          <p id="bomb-text">Bombs are unlucky, as rolling one nullifies the active player's current score and starts the turn of the other player. Chance: 1/6th.</p>
+        </div>
+      </div>
+      <p class="rule-line" id="rule-line-4">Will you take risks and keep rolling, or play safe instead and hold often?</p>
+    </div>
+    <div class="middle-section">
+      <div class="middle-left-section">
+        <p class="player-1">Player 1</p>
+        <p class="current-score-1">0</p>
+        <p class="total-score-1">0</p>
+      </div>
+      <div class="middle-right-section">
+        <p class="player-2">Player 2</p>
+        <p class="current-score-2">0</p>
+        <p class="total-score-2">0</p>
+      </div>
+    </div>
+    <div class="bottom-section">
+      <button class="button" id="roll">Roll</button>
+      <img
+        class="picture"
+        src="Unknown.png"
+        alt="A die with an unknown facet."
+      />
+      <button class="button" id="hold">Hold</button>
+    </div>
+    <div class="lowest-section">
+      <button class="language-button" id="english-button">ENGLISH</button>
+      <button class="language-button" id="hungarian-button">MAGYAR</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
